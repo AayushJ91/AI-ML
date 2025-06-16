@@ -30,6 +30,36 @@ class Calculator2:
             return x/y
         else:
             return "Invalid"
-calc = Calculator2()
-print(calc.add(1,2))
-print(calc.div(2,0))
+
+class Shape:
+    def area():
+        pass
+    def perimeter():
+        pass
+    def display():
+        pass
+
+class circle(Shape):
+    def __init__(self, r):
+        self.r = r
+    
+    def area(self):
+        return 3.14*self.r**2
+    def perimeter(self):
+        return 6.28*self.r
+    def display(self):
+        print(f"the are is: {self.area()}")
+        print(f"the perimeter is: {self.perimeter()}")
+    
+class Triangle(Shape):
+    def __init__(self, h, b):
+        self.h = h
+        self.b = b
+     
+    def area(self):
+        return 0.5*self.h*self.b
+    def display(self):
+        print(f"The area of triangle is: {self.area()}")
+
+c1 = circle(7)
+c1.display()
