@@ -61,5 +61,28 @@ class Triangle(Shape):
     def display(self):
         print(f"The area of triangle is: {self.area()}")
 
-c1 = circle(7)
-c1.display()
+class Stack:
+    def __init__(self):
+        self.x = []
+    def push(self,a):
+        self.x.append(a)
+    
+    def pop(self):
+        self.x.pop(len(self.x) - 1)
+    
+    def display(self):
+        for i in range(len(self.x)):
+            if i == len(self.x) - 1:
+                print(f"{self.x[i]} <- top")
+            else:
+                print(self.x[i], end=" ")
+
+st = Stack()
+st.push(9)
+st.push(8)
+st.push(10)
+st.push(78)
+st.push(68)
+st.display()
+st.pop()
+st.display()
