@@ -64,6 +64,7 @@ class Triangle(Shape):
 class Stack:
     def __init__(self):
         self.x = []
+        
     def push(self,a):
         self.x.append(a)
     
